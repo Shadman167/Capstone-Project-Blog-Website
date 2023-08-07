@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs") %>
+<h1>Home</h1>
+
+<p><%= locals.homeContent %></p>
+<% locals.myPosts.forEach(function(posts){ %>
+    <h1><%= posts.title %></h1>
+    <p><%= posts.post.slice(0, 100) + ' ... ' %><a href="/posts/<%= posts.title %>">Read more</a></p>
+    
+    
+<% }) %>
+
+
+     
+<%- include("partials/footer.ejs") %>
+
